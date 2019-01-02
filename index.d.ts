@@ -42,7 +42,7 @@ declare namespace oledb
         /** Excutes a stored procedure and returns the result */
         procedureScalar: <T>(procedureName: string, params?: JsCommandParameter[])=>Promise<JsCommand<T>>;
         /** Excutes a stored procedure and returns the result */
-        transaction: <T>(commands: JsCommand[], params?: JsCommandParameter[])=>Promise<JsCommand<T>>;
+        transaction: <T>(commands: JsCommand<T>[], params?: JsCommandParameter[])=>Promise<JsCommand<T>>;
     }
 
     export enum PARAMETER_DIRECTIONS 
